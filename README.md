@@ -22,4 +22,5 @@ PowerShell Version 4.0
 Run the following commands to delete the DuckDNS jobs.
 
 `Unregister-ScheduledJob "RunDuckDnsUpdate"`
+
 `Unregister-ScheduledJob "StartDuckDnsJob"`
