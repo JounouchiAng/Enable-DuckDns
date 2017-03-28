@@ -17,3 +17,9 @@ PowerShell Version 4.0
 
 ## Sample Usage
 `.\Enable-DuckDNS.ps1 -MyDomains "wibble,pibble" -Token YourDuckDNSToken -Interval 5`
+
+## Deleting Jobs
+Run the following commands to delete the DuckDNS jobs.
+
+`Unregister-ScheduledJob "RunDuckDnsUpdate"`
+`Unregister-ScheduledJob "StartDuckDnsJob"`
