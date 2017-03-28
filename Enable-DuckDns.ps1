@@ -121,7 +121,7 @@ If($Break){
 # Clear any existing jobs
 $jobs = @("RunDuckDnsUpdate", "StartDuckDnsJob")
 foreach ($job in $jobs) {
-    If(Get-ScheduledJob $job) {
+    If(Get-ScheduledJob $job -ErrorAction SilentlyContinue) {
         Unregister-ScheduledJob $job
     }
 }
