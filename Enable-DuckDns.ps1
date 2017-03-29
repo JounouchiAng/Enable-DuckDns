@@ -118,6 +118,14 @@ If($Break){
     Break
 }
 
+# Clear any existing jobs
+$jobs = @("RunDuckDnsUpdate", "StartDuckDnsJob")
+foreach ($job in $jobs) {
+    If(Get-ScheduledJob $job -ErrorAction SilentlyContinue) {
+        Unregister-ScheduledJob $job
+    }
+}
+
 # Check to see if the "DuckDNS Updater" event log source already exists,
 # and if it doesn't then create it
 if (!([System.Diagnostics.EventLog]::SourceExists("DuckDNS Updater"))){
