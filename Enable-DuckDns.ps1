@@ -66,6 +66,8 @@ Param (
     # If the response is anything other than 'OK' then log an error in the windows event log
     if($Text_Response -ne "OK"){
         Write-EventLog -LogName Application -Source "DuckDNS Updater" -EntryType Information -EventID 1 -Message "DuckDNS Update failed for some reason. Check your Domain or Token.";
+    } else {
+        Write-EventLog -LogName Application -Source "DuckDNS Updater" -EntryType Information -EventID 2 -Message "DuckDNS Update successful"
     }
 }
 
