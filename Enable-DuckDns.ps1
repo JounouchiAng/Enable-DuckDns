@@ -11,10 +11,12 @@
     your DuckDNS domains.
 .PARAMETER Domains
     A comma-separated list of your Duck DNS domains to update.
+    The domain does not need to include the .duckdns.org part of 
+    your domain, just the subname.
 .PARAMETER Token
     Your Duck DNS token.
 .PARAMETER IP
-    The IP address to use. Usuallu DuckDNS automatically detects this
+    The IP address to use. Usually DuckDNS automatically detects this
     for you, so you should leave it blank unless you know what you're
     doing.
 .INPUTS
